@@ -49,7 +49,7 @@ public class Dromru {
 
             Filter filter = new Filter(args[0], args[1], engineFrom, engineTo, year);
 
-            CarsResource carsResource = new FileCarsResource();
+            CarsResource carsResource = new DromCarsResource();
             filterCars(carsResource, filter);
 
 
