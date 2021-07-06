@@ -1,9 +1,7 @@
-import com.sun.tools.javac.Main;
+package ru.major;
 
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class Dromru {
 

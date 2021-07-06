@@ -1,3 +1,5 @@
+package ru.major;
+
 public class Car {
 
     private String marka;

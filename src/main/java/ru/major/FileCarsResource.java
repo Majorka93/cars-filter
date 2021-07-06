@@ -1,3 +1,5 @@
+package ru.major;
+
 import java.io.*;
 import java.util.*;
 
@@ -8,7 +10,7 @@ public class FileCarsResource implements CarsResource {
 
     @Override
     public List<Car> findAllCars() throws FileNotFoundException {
-        //List <Car> ImpData = new ArrayList<>();
+        //List <ru.major.Car> ImpData = new ArrayList<>();
         Map<String,Car> fileCarMap = new HashMap<>();
         try {
             String str = null;
@@ -30,7 +32,7 @@ public class FileCarsResource implements CarsResource {
         } catch (IOException exc) {
             throw new IllegalArgumentException();
 //            System.out.println("IO error!" + exc);
-//            return new Car[0];
+//            return new ru.major.Car[0];
         }
         return new ArrayList<>(fileCarMap.values());
 

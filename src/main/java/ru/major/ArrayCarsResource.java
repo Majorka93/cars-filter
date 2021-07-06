@@ -1,3 +1,5 @@
+package ru.major;
+
 import java.util.*;
 
 public class ArrayCarsResource implements CarsResource {
