@@ -27,7 +27,7 @@ public class Dromru {
 
             Filter filter = new Filter(args[0], args[1], engineFrom, engineTo, year);
 
-            CarsResource carsResource = new DromCarsResource();
+            CarsResource carsResource = new AvitoCarsResource();
             filterCars(carsResource, filter);
 
 
