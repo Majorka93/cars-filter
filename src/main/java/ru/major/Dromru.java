@@ -6,7 +6,6 @@ import java.util.List;
 public class Dromru {
 
 
-
     public static void main(String[] args) throws FileNotFoundException {
 
         StringBuilder buf = new StringBuilder("Вы ищете авто:");
@@ -31,7 +30,6 @@ public class Dromru {
             CarsResource carsResource = new CarsResourceFactory().create(args[5]);
 
             filterCars(carsResource, filter);
-
 
         } else {
             throw new IllegalArgumentException();
