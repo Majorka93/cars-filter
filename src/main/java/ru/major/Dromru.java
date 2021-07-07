@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Dromru {
 
+
+
     public static void main(String[] args) throws FileNotFoundException {
 
         StringBuilder buf = new StringBuilder("Вы ищете авто:");
@@ -17,7 +19,7 @@ public class Dromru {
         System.out.println(buf);
 
 
-        if (args.length == 5) {
+        if (args.length == 6) {
 
 
             int engineFrom = parsing(getDefault(args[2], "0"), "двигатель ОТ");
@@ -26,8 +28,8 @@ public class Dromru {
 
 
             Filter filter = new Filter(args[0], args[1], engineFrom, engineTo, year);
+            CarsResource carsResource = new CarsResourceFactory().create(args[5]);
 
-            CarsResource carsResource = new IrrCarsResource();
             filterCars(carsResource, filter);
 
 
@@ -38,7 +40,7 @@ public class Dromru {
     }
 
 
-    public static void outOnDisplay(StringBuilder buf, String str) {
+    private static void outOnDisplay(StringBuilder buf, String str) {
         if (!str.equals("")) {
             buf.append(" ").append(str);
         }

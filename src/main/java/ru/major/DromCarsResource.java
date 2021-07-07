@@ -20,7 +20,7 @@ public class DromCarsResource implements CarsResource {
 
         List<Car> result = new ArrayList<>();
         try {
-            Document doc = Jsoup.connect("https://auto.drom.ru/bmw/all/?minyear=2016&maxyear=2021").get();
+            Document doc = Jsoup.connect("https://auto.drom.ru").get();
             Elements cars = doc.select(".css-1psewqh");
             for (Element car : cars) {
 
