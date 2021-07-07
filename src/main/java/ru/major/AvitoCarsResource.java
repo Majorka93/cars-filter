@@ -21,7 +21,7 @@ public class AvitoCarsResource implements CarsResource {
 
         try {
             var doc = Jsoup.connect("https://www.avito.ru/moskva/avtomobili/audi?cd=1&radius=0").get();
-            var cars = doc.select(". iva-item-content-m2FiN");
+            var cars = doc.select(".iva-item-content-m2FiN");
             for (var car : cars) {
                 String title = car.select(".iva-item-titleStep-2bjuh").text();
                 String[] splittitle = title.split(",");
