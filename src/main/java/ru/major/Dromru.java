@@ -17,28 +17,6 @@ public class Dromru {
         System.out.println(buf);
 
 
-//        StringBuilder buf = new StringBuilder("Вы ищете авто:");
-//        if (!args[0].equals("")) {
-//            buf.append(" ").append(args[0]);
-//        }
-//
-//        if (!args[1].equals("")) {
-//            buf.append(" ").append(args[1]);
-//        }
-//        if (!args[2].equals("")) {
-//            buf.append(" ").append(args[2]);
-//        }
-//        if (!args[3].equals("")) {
-//            buf.append(" ").append(args[3]);
-//        }
-//        if (!args[4].equals("")) {
-//            buf.append(" ").append(args[4]);
-//        }
-
-
-//        System.out.println(buf);
-
-
         if (args.length == 5) {
 
 
