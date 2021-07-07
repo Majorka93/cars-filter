@@ -41,12 +41,12 @@ public class DromCarsResource implements CarsResource {
 
                 result.add(new Car(marka, model, Integer.parseInt(horsePower), year));
             }
-            return result;
+
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return Collections.emptyList();
+        return result;
     }
 }

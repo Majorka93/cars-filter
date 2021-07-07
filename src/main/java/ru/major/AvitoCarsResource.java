@@ -24,10 +24,10 @@ public class AvitoCarsResource implements CarsResource {
             var cars = doc.select(".iva-item-content-m2FiN");
             for (var car : cars) {
                 String title = car.select(".iva-item-titleStep-2bjuh").text();
-                String[] splittitle = title.split(",");
-                String marka = splittitle[0].split(" ")[0];
-                String model = splittitle[0].replace(marka, "").trim();
-                Integer year = Integer.parseInt(splittitle[1].trim());
+                String[] splitTitle = title.split(",");
+                String marka = splitTitle[0].split(" ")[0];
+                String model = splitTitle[0].replace(marka, "").trim();
+                Integer year = Integer.parseInt(splitTitle[1].trim());
                 String engineTmp = car.select(".iva-item-autoParamsStep-14Mv3").get(0).text();
                 String[] engineArray = engineTmp.split("\\(");
                 String horsePower;
@@ -39,7 +39,7 @@ public class AvitoCarsResource implements CarsResource {
 
                 result.add(new Car(marka, model, Integer.parseInt(horsePower), year));
             }
-            return result;
+
         } catch (IOException e) {
             e.printStackTrace();
         }
